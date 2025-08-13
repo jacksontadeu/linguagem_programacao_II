@@ -1,4 +1,14 @@
-## Linguagem de Programação II
+# Linguagem de Programação II
+
+## Exercício do Baralho
+
+### Tecnologias utilizadas
+
+- Linguagem : Java 21 LTS
+- IDE : Intellig IDEA
+- Git / Github 
+
+### Descrição do projeto
 
 - Crie a classe Carta, que possui um nome e um naipe. Crie os
 métodos GET e SET para os atributos. Crie agora uma classe
@@ -7,7 +17,7 @@ as 52 cartas (juntamente com os 4 coringas, que devem se chamar
 “coringa” e o naipe é “coringa”).
 
 
-# Métodos desenvolvidos
+### Métodos desenvolvidos
 - embaralhar( ) – usando o método Math.random dá para trocar as
 cartas dentro do baralho, misturando-as (sorteie duas posições e
 troque-as. Repita este processo diversas vezes).

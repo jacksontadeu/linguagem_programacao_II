@@ -22,6 +22,14 @@ public class Baralho {
             System.out.println("Baralho cheio!");
         }
     }
+    public void embaralharCartas() {
+        for (int i = 0; i < cartas.length; i++) {
+            int posicaoAleatoria = (int) (Math.random() * cartas.length);
+            Carta carta = cartas[i];
+            cartas[i] = cartas[posicaoAleatoria];
+            cartas[posicaoAleatoria] = carta;
+        }
+    }
 
     public Carta distribuirCarta() {
         if (tamanho > 0) {
