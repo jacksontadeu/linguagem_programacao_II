@@ -4,7 +4,8 @@ public enum Naipe {
     OURO("Ouro"),
     PAUS("Paus"),
     COPAS("Copas"),
-    ESPADAS("Espadas");
+    ESPADAS("Espadas"),
+    CORINGA("Coringa");
 
     private final String descricao;
 

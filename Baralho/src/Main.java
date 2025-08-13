@@ -13,7 +13,7 @@ public class Main {
         baralho.adicionarCarta(carta1);
         baralho.adicionarCarta(carta2);
 
-        System.out.println(baralho);;
+        baralho.imprimirBaralho();
 
     }
 }

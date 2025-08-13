@@ -29,9 +29,7 @@ public class Carta {
 
     @Override
     public String toString() {
-        return "Carta{" +
-                "nome='" + nome + '\'' +
-                ", naipe=" + naipe +
-                '}';
+        return nome + " " + naipe;
+
     }
 }

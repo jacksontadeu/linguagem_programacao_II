@@ -10,6 +10,9 @@ public class Baralho {
         this.cartas = new Carta[52];
         this.tamanho = 0;
     }
+    public int getTamanho() {
+        return tamanho;
+    }
 
     public void adicionarCarta(Carta carta) {
         if (tamanho < cartas.length) {
@@ -20,7 +23,7 @@ public class Baralho {
         }
     }
 
-    public Carta removerCarta() {
+    public Carta distribuirCarta() {
         if (tamanho > 0) {
             Carta carta = cartas[tamanho - 1];
             cartas[tamanho - 1] = null;
@@ -31,16 +34,27 @@ public class Baralho {
             return null;
         }
     }
-
-    public int getTamanho() {
-        return tamanho;
+    public Boolean hasCarta(){
+        if (tamanho > 0) {
+            return true;
+        } else {
+            return false;
+        }
     }
+    public void imprimirBaralho(){
+        for (Carta carta : cartas) {
+            if (carta != null) {
+                System.out.println(carta);
+            }
+        }
+    }
+
+
 
     @Override
     public String toString() {
-        return "Baralho{" +
-                "cartas=" + Arrays.toString(cartas) +
-                ", tamanho=" + tamanho +
-                '}';
+        return "Baralho"
+                 + Arrays.toString(cartas);
+
     }
 }
