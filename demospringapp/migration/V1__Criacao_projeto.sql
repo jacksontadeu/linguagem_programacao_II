@@ -1,0 +1,7 @@
+CREATE TABLE user
+(
+    id    BIGINT AUTO_INCREMENT NOT NULL,
+    nome  VARCHAR(255) NULL,
+    idade INT NULL,
+    CONSTRAINT pk_user PRIMARY KEY (id)
+);
