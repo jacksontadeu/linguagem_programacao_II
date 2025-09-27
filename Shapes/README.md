@@ -11,4 +11,4 @@ Losango
 Cubo
 Observação: Não é necessário usar GETTER e SETTER nas classes que representam as figuras geométricas.
 
-AreaChecker Diagram
+AreaCh![img.png](img.png)ecker Diagram
