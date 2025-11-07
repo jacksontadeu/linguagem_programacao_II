@@ -34,9 +34,16 @@ public abstract class Mensagem {
     public void setConteudo(String conteudo) {
         this.conteudo = conteudo;
     }
-    public String toString(){
 
-        return null;
+    public abstract Mensagem sendMessage(String mensagem);
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder("Mensagem{ ");
+        sb.append(" destinatario: ").append(this.destinatario.getNome());
+        sb.append(" horaEnvio: '").append(horaEnvio).append('\'');
+        sb.append(" conteudo: '").append(conteudo).append('\'');
+
+        return sb.toString();
     }
-    public abstract Mensagem sendMessage();
 }
