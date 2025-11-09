@@ -13,11 +13,17 @@ public class ListaCompra implements Calculavel {
     }
 
     public void incluirItem(ItemCompra item){
-        itensCompra.add(item);
+        if(itensCompra.toArray().length <= this.qtdeMax){
+            itensCompra.add(item);
+        }else{
+            System.out.println("Quantidade máxima da lista excedida");
+        }
+
     }
 
     @Override
     public double calcularPreco() {
+
         return 0;
     }
 }

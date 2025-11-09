@@ -1,12 +1,22 @@
 package edu.fatec.lp2.exercicio2.model;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class ItemCompra implements  Calculavel {
 
     private Integer quantidade;
     private Produto produto;
     private Double desconto;
 
+    public ItemCompra(Integer quantidade, Produto produto, Double desconto) {
+        this.quantidade = quantidade;
+        this.produto = produto;
+        this.desconto = desconto;
+    }
+
     public ItemCompra() {
+
     }
 
     public Integer getQuantidade() {
@@ -35,6 +45,23 @@ public class ItemCompra implements  Calculavel {
 
     @Override
     public double calcularPreco() {
-        return 0;
+        if (this.desconto > this.produto.getDescontoMaximo()){
+            System.out.println("Desconto maior que o permitido");
+            return this.produto.getPreco();
+        }else{
+            this.produto.setPreco(this.produto.getPreco() - this.getDesconto());
+            return this.produto.getPreco();
+        }
+    }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("ItemCompra{");
+        sb.append("quantidade=").append(quantidade);
+        sb.append(", produto=").append(produto.getNome());
+        sb.append(", produto=").append(produto.getPreco());
+        sb.append(", desconto=").append(desconto);
+        sb.append('}');
+        return sb.toString();
     }
 }
